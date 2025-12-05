@@ -36,7 +36,7 @@ namespace AzureHW
         /// 
         [FunctionName("UpdateCurrencyRatesHourly")]
         public async Task UpdateCurrencyRatesHourly(
-            [TimerTrigger("0 0 * * * *")] TimerInfo timer,
+            [TimerTrigger("0 * * * * *")] TimerInfo timer,
             ILogger logger)
         {
             logger.LogInformation($"Початок оновлення курсів валют: {DateTime.Now}");
